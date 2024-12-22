@@ -1,4 +1,4 @@
-// UserCard.js
+
 import React, { useState, useEffect } from 'react';
 
 const UserCard = () => {
@@ -11,16 +11,16 @@ const UserCard = () => {
   }, []);
 
   return (
-    <div className="container mx-auto mt-10 bg-gradient-to-br from-purple-300 to-blue-400 min-h-screen flex items-center justify-center">
+    <div className="container mx-auto mt-10 bg-gray-200 min-h-screen flex items-center justify-center">
       {userData && (
-        <div className="max-w-xl bg-white shadow-md rounded-lg overflow-hidden p-8">
-          <h1 className="text-3xl font-semibold text-gray-800 mb-4">User Profile</h1>
+        <div className="max-w-xl bg-white dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]  dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border overflow-hidden">
           <div className="flex items-center justify-between">
-            <div className="w-1/3 bg-gradient-to-br from-pink-200 to-purple-300 p-4 rounded-lg">
+            <div className="w-1/2 justify-around rounded-t-lg">
               <img className="rounded-full w-32 h-32" src={userData.picture.large} alt="User" />
             </div>
             <div className="w-2/3 ml-8">
               <h1 className="text-gray-900 font-bold text-xl mb-4">{userData.name.first} {userData.name.last}</h1>
+              <h1 className="text-gray-900  text-xl mb-4">{userData.gender}</h1>
               <p className="text-gray-700 text-base mb-2">
                 <span className="font-semibold text-gray-800">Email:</span> {userData.email}
               </p>
